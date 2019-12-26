@@ -17,7 +17,7 @@ Substitutes docker www domain to chosen 'domain':'port'.
 
 
     proxy:
-        image: httpd_reverse_proxy:latest
+        image: httpd_reverse_proxy:1.0.0
         depends_on:
           - wordpress
         ports:
