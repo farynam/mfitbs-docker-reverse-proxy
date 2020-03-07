@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  httpd_proxy:
+    image: farynam/httpd_reverse_proxy:1.0.4
+    ports:
+      - "9080:80"
+    volumes:
+      - ./test/:/myapp/conf/
+    restart: "no"
+    environment:
+      SOURCE_DOMAIN:
+      TARGET_DOMAIN:
